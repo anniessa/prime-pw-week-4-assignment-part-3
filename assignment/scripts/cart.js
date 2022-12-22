@@ -9,13 +9,13 @@ function isFull() {
     return basket.length >= maxItems;
 }
 function addItem(item) {
-return basket.push(item) ? isFull() : false
+return basket.push(item) ? isFull() : false;
 }
 console.log(`Basket is ${basket}`);
+console.log('Is my basket full? (expect false)', isFull());
 console.log('Adding apples (expect true)', addItem('apples'));
 console.log(`Basket is now ${basket}`);
-console.log('There is no more room in your basket (expect fasle)', isFull('potatoes'));
-
+console.log('Is my basket full? (expect true)', isFull());
 
 function listItems(){
     for (const item of basket){
@@ -29,8 +29,6 @@ basket = [];
 }
 empty();
 console.log(basket);
-
-const maxItems = 5;
 
 function isFull() {
     return basket.length >= maxItems;
