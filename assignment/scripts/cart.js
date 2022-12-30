@@ -24,14 +24,21 @@ function listItems(){
 }
 listItems();
 
-function empty () {
-basket = [];
-}
-empty();
-console.log(basket);
-
 function isFull() {
     return basket.length >= maxItems;
 }
-console.log(isFull());
+console.log('Should expect true', isFull());
 
+function removeItem(basket, item) {
+    const index = basket.indexOf (item);
+    basket.splice(index, 1);
+    return (basket === null) ? 'null' : item ;
+}
+console.log('Currently in your basket', basket);
+console.log('You removed blackberries from your basket (should expect blackberries)', removeItem(basket, 'blackberries'));
+
+function empty () {
+    basket = [];
+    }
+    empty();
+    console.log(basket);
