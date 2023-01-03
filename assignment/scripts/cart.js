@@ -29,16 +29,32 @@ function isFull() {
 }
 console.log('Should expect true', isFull());
 
+// function removeItem(basket, item) {
+//     let index = basket.indexOf(item); 
+//     for (let index = 0; index < basket.length; index++){
+//         if(basket[item] === item){
+//             return item;
+//         } else{
+//             return 'null';
+//         }
+//     };  basket.splice(index, 1);
+// }
+
 function removeItem(basket, item) {
-    const index = basket.indexOf (item);
-    basket.splice(index, 1);
-    return (basket === null) ? 'null' : item ;
+    const index = basket.indexOf (item); {
+    if (basket[index] === item) {
+    let thing = item;
+    basket.splice(item);
+    return thing} else return 'null';
+}
 }
 console.log('Currently in your basket', basket);
 console.log('You removed blackberries from your basket (should expect blackberries)', removeItem(basket, 'blackberries'));
+console.log('This is not in your basket (should expect null)', removeItem(basket, 'carrots'));
 
 function empty () {
     basket = [];
     }
     empty();
-    console.log(basket);
+    console.log(basket); 
+
