@@ -43,13 +43,13 @@ console.log('Should expect true', isFull());
 function removeItem(basket, item) {
     const index = basket.indexOf (item); {
     if (basket[index] === item) {
-    let thing = item;
     basket.splice(item);
-    return thing} else return 'null';
+    return item} else return 'null';
 }
 }
 console.log('Currently in your basket', basket);
 console.log('You removed blackberries from your basket (should expect blackberries)', removeItem(basket, 'blackberries'));
+console.log('Currently in your basket (blackberries should be removed)', basket);
 console.log('This is not in your basket (should expect null)', removeItem(basket, 'carrots'));
 
 function empty () {
