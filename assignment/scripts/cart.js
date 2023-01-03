@@ -29,27 +29,16 @@ function isFull() {
 }
 console.log('Should expect true', isFull());
 
-// function removeItem(basket, item) {
-//     let index = basket.indexOf(item); 
-//     for (let index = 0; index < basket.length; index++){
-//         if(basket[item] === item){
-//             return item;
-//         } else{
-//             return 'null';
-//         }
-//     };  basket.splice(index, 1);
-// }
-
-function removeItem(basket, item) {
-    const index = basket.indexOf (item); {
-    if (basket[index] === item) {
-    basket.splice(item);
+function removeItem(array, item) {
+    const index = array.indexOf (item); {
+    if (array[index] === item) {
+    array.splice(index, 1);
     return item} else return 'null';
 }
 }
 console.log('Currently in your basket', basket);
-console.log('You removed blackberries from your basket (should expect blackberries)', removeItem(basket, 'blackberries'));
-console.log('Currently in your basket (blackberries should be removed)', basket);
+console.log('You removed blackberries from your basket (should expect blackberries)', removeItem(basket, 'blackberries'), '(show basket now)', basket);
+console.log('You removed grapes from your basket (should expect grapes)', removeItem(basket, 'grapes'), '(show basket now)', basket);
 console.log('This is not in your basket (should expect null)', removeItem(basket, 'carrots'));
 
 function empty () {
